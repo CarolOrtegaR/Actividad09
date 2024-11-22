@@ -1,0 +1,110 @@
+/* General */
+#flex-cajas {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que las cajas se ajusten a varias líneas si no caben */
+    justify-content: space-between; /* Distribuye las cajas uniformemente con espacios */
+    align-items: center; /* Alinea verticalmente las cajas al centro */
+    gap: 10px; /* Espaciado entre las cajas */
+    padding: 20px;
+    background-color: #ffffe0;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+}
+
+/* Estilo individual para las cajas */
+.cajas {
+    flex: 1 1 calc(20% - 10px); /* Cada caja ocupa el 20% del ancho disponible menos el espaciado */
+    text-align: center;
+    padding: 15px;
+    background-color: #b3d9ff; 
+    color: #003366; 
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #003366;
+    transition: transform 0.3s ease;
+}
+
+/* Colores personalizados para las cajas */
+#caja1 {
+    background-color: #c19a6b;
+}
+#caja2 {
+    background-color: #80b3ff; 
+}
+#caja3 {
+    background-color: #adebad; 
+}
+#caja4 {
+    background-color: #c2f0c2; 
+}
+#caja5 {
+    background-color: #f9e79f;
+}
+
+/* Efecto hover */
+.cajas:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .cajas {
+        flex: 1 1 calc(50% - 10px); /* Ocupa la mitad del ancho en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .cajas {
+        flex: 1 1 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    }
+}
+/*********************************************************************************/
+
+/* Nuevo contenedor 1 */
+#contenedor1 {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos pasen a otra fila si no caben */
+    justify-content: space-around; /* Espacia los elementos uniformemente */
+    gap: 15px; /* Espacio entre los elementos */
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f0f8ff; 
+    border: 2px solid #cce7ff;
+    border-radius: 8px;
+}
+
+#contenedor1 .item {
+    flex: 1 1 calc(30% - 15px); /* Cada caja ocupa el 30% del ancho disponible */
+    background-color: #87cefa; 
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Nuevo contenedor 2 */
+#contenedor2 {
+    display: flex;
+    flex-wrap: nowrap; /* Los elementos se mantendrán en una sola fila */
+    justify-content: space-evenly; /* Espacio uniforme entre las cajas */
+    align-items: center; /* Alineación vertical al centro */
+    gap: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #faf0e6;
+    border: 2px solid #f5deb3;
+    border-radius: 8px;
+}
+
+#contenedor2 .item {
+    flex: 0 0 40%; /* Cada caja ocupa el 40% del ancho total */
+    background-color: #ffb6c1; 
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}

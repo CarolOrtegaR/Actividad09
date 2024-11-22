@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background-color: #eaf2d3;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #c2d6a8;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #003366;
+}
+
+p {
+    margin: 10px;
+}
+
+span {
+    font-weight: bold;
+    color: #003366;
+}
+
+/* Flexbox para los textos */
+#flex-textos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los textos se ajusten en pantallas pequeñas */
+    gap: 15px; /* Espacio entre las cajas */
+    justify-content: space-between; /* Distribuye las cajas uniformemente */
+    padding: 20px;
+    background-color: #ffffe0;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+}
+
+#flex-textos > div {
+    flex: 1 1 calc(33% - 30px); /* Cada caja ocupa un tercio del ancho */
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#flex-textos > div p {
+    text-align: justify;
+}
+
+/* Flexbox para las cajas */
+#flex-cajas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cajas se ajusten si no caben */
+    gap: 15px; /* Espacio entre las cajas */
+    justify-content: center; /* Centra las cajas horizontalmente */
+    padding: 30px;
+    background-color: #ffffe0;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+}
+
+.cajas {
+    flex: 1 1 calc(20% - 30px); /* Cada caja ocupa el 20% del ancho disponible */
+    text-align: center;
+    padding: 15px;
+    background-color: #003366;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.cajas:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #flex-textos > div,
+    .cajas {
+        flex: 1 1 calc(50% - 30px); /* Ocupa la mitad del ancho en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    #flex-textos > div,
+    .cajas {
+        flex: 1 1 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    }
+}
